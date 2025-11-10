@@ -12,98 +12,31 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: "list" }}__item experience-item">
+<div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <div class="experience-container">
-      
-      <!-- Company Logo -->
-      {% if post.company_logo %}
-      <div class="experience-logo">
-        <a href="{{ post.company_url }}" target="_blank" rel="noopener">
-          <img src="{{ post.company_logo | prepend: base_path }}" alt="{{ post.title }} logo">
-        </a>
+    <li>
+    {% if include.type == "grid" and teaser %}
+      <div class="archive__item-teaser">
+        <img src=
+          {% if teaser contains "://" %}
+            "{{ teaser }}"
+          {% else %}
+            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+          {% endif %}
+          alt="">
       </div>
+    {% endif %}
+    <h3 class="archive__item-title" itemprop="headline">
+      {% if post.link %}
+        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+      {% else %}
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
       {% endif %}
-      
-      <!-- Experience Details -->
-      <div class="experience-details">
-        
-        <!-- Position Title -->
-        <h2 class="archive__item-title" itemprop="headline">
-          {{ post.type }}
-        </h2>
-        
-        <!-- Company Name -->
-        <div class="experience-company">
-          {% if post.company_url %}
-            <a href="{{ post.company_url }}" target="_blank" rel="noopener">
-              <strong>{{ title }}</strong>
-            </a>
-          {% else %}
-            <strong>{{ title }}</strong>
-          {% endif %}
-          
-          {% if post.employment_type %}
-            <span class="employment-type"> · {{ post.employment_type }}</span>
-          {% endif %}
-        </div>
-        
-        <!-- Date Range -->
-        <div class="experience-dates">
-          <i class="fa fa-calendar" aria-hidden="true"></i>
-          {% if post.date_from %}
-            {{ post.date_from | date: "%b %Y" }}
-          {% endif %}
-          - 
-          {% if post.date_to %}
-            {% assign current_date = "now" | date: "%Y-%m-%d" %}
-            {% if post.date_to >= current_date %}
-              Present
-            {% else %}
-              {{ post.date_to | date: "%b %Y" }}
-            {% endif %}
-          {% else %}
-            Present
-          {% endif %}
-          
-          <!-- Duration calculation -->
-          {% if post.date_from and post.date_to %}
-            {% assign from_month = post.date_from | date: "%m" | plus: 0 %}
-            {% assign from_year = post.date_from | date: "%Y" | plus: 0 %}
-            {% assign to_month = post.date_to | date: "%m" | plus: 0 %}
-            {% assign to_year = post.date_to | date: "%Y" | plus: 0 %}
-            {% assign months = to_month | minus: from_month %}
-            {% assign years = to_year | minus: from_year %}
-            {% assign total_months = months | plus: years | times: 12 %}
-            
-            {% if total_months > 0 %}
-              <span class="duration"> · 
-                {% assign years_display = total_months | divided_by: 12 %}
-                {% assign months_display = total_months | modulo: 12 %}
-                {% if years_display > 0 %}{{ years_display }} yr{% if years_display > 1 %}s{% endif %}{% endif %}
-                {% if months_display > 0 %} {{ months_display }} mo{% if months_display > 1 %}s{% endif %}{% endif %}
-              </span>
-            {% endif %}
-          {% endif %}
-        </div>
-        
-        <!-- Location -->
-        {% if post.location %}
-        <div class="experience-location">
-          <i class="fa fa-map-marker-alt" style="font-weight: 300;" aria-hidden="true"></i> {{ post.location }}
-        </div>
-        {% endif %}
-        
-        <!-- Description -->
-        {% if post.excerpt %}
-        <div class="experience-description">
-          {{ post.excerpt | markdownify }}
-        </div>
-        {% endif %}
-        
-      </div>
-    </div>
-    
-  </article>
+    </h3>
+    {% if post.read_time %}
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+    {% endif %}
+    {% if post.venue%}<p class="archive__item-excerpt" itemprop="description">{{ post.citation }}</p> {% endif %}
+    </li>
+ </article>
 </div>
