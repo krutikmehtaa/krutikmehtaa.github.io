@@ -1,11 +1,5 @@
 {% include base_path %}
 
-{% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
-{% else %}
-  {% assign teaser = site.teaser %}
-{% endif %}
-
 {% if post.id %}
   {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% else %}
@@ -20,9 +14,13 @@
       <!-- Company Logo -->
       {% if post.company_logo %}
       <div class="experience-logo">
-        <a href="{{ post.company_url }}" target="_blank" rel="noopener">
+        {% if post.company_url %}
+          <a href="{{ post.company_url }}" target="_blank" rel="noopener">
+            <img src="{{ post.company_logo | prepend: base_path }}" alt="{{ post.title }} logo">
+          </a>
+        {% else %}
           <img src="{{ post.company_logo | prepend: base_path }}" alt="{{ post.title }} logo">
-        </a>
+        {% endif %}
       </div>
       {% endif %}
       
@@ -67,22 +65,19 @@
             Present
           {% endif %}
           
-          <!-- Duration calculation -->
+          <!-- Calculate duration -->
           {% if post.date_from and post.date_to %}
-            {% assign from_month = post.date_from | date: "%m" | plus: 0 %}
-            {% assign from_year = post.date_from | date: "%Y" | plus: 0 %}
-            {% assign to_month = post.date_to | date: "%m" | plus: 0 %}
-            {% assign to_year = post.date_to | date: "%Y" | plus: 0 %}
-            {% assign months = to_month | minus: from_month %}
-            {% assign years = to_year | minus: from_year %}
-            {% assign total_months = months | plus: years | times: 12 %}
+            {% assign from_date = post.date_from | date: "%s" | divided_by: 86400 %}
+            {% assign to_date = post.date_to | date: "%s" | divided_by: 86400 %}
+            {% assign diff_days = to_date | minus: from_date %}
+            {% assign total_months = diff_days | divided_by: 30 %}
             
             {% if total_months > 0 %}
               <span class="duration"> · 
                 {% assign years_display = total_months | divided_by: 12 %}
                 {% assign months_display = total_months | modulo: 12 %}
                 {% if years_display > 0 %}{{ years_display }} yr{% if years_display > 1 %}s{% endif %}{% endif %}
-                {% if months_display > 0 %} {{ months_display }} mo{% if months_display > 1 %}s{% endif %}{% endif %}
+                {% if months_display > 0 %} {{ months_display }} mo{% endif %}
               </span>
             {% endif %}
           {% endif %}
@@ -95,12 +90,10 @@
         </div>
         {% endif %}
         
-        <!-- Description -->
-        {% if post.excerpt %}
+        <!-- Description/Responsibilities -->
         <div class="experience-description">
-          {{ post.excerpt | markdownify }}
+          {{ post.content }}
         </div>
-        {% endif %}
         
       </div>
     </div>

@@ -39,3 +39,172 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+
+/* ===================================
+   CUSTOM STYLES - Krutik Mehta
+   =================================== */
+
+/* Larger circular profile photo */
+.author__avatar img {
+  width: 180px !important;
+  height: 180px !important;
+  max-width: 180px !important;
+  max-height: 180px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+}
+
+/* Lighter map marker icon */
+.author__urls .fa-map-marker {
+  font-weight: 300 !important;
+  opacity: 0.8;
+}
+
+/* ===================================
+   LinkedIn-Style Experience Section
+   =================================== */
+
+.experience-item {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.experience-container {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.experience-logo {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background: white;
+    padding: 4px;
+  }
+  
+  a:hover img {
+    border-color: #0073b1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+  }
+}
+
+.experience-details {
+  flex: 1;
+  
+  .archive__item-title {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #000;
+  }
+  
+  .experience-company {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    
+    strong {
+      color: #000;
+    }
+    
+    a {
+      color: #000;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+        color: #0073b1;
+      }
+    }
+    
+    .employment-type {
+      color: #666;
+      font-weight: normal;
+    }
+  }
+  
+  .experience-dates {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+    
+    i {
+      margin-right: 0.25rem;
+    }
+    
+    .duration {
+      color: #666;
+    }
+  }
+  
+  .experience-location {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+    
+    i {
+      margin-right: 0.25rem;
+    }
+  }
+  
+  .experience-description {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #333;
+    
+    ul {
+      margin: 0.5rem 0 0 0;
+      padding-left: 1.25rem;
+      list-style-type: disc;
+      
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+    
+    p {
+      margin: 0.5rem 0;
+      
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .experience-container {
+    gap: 0.75rem;
+  }
+  
+  .experience-logo {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .experience-details {
+    .archive__item-title {
+      font-size: 0.95rem;
+    }
+    
+    .experience-company {
+      font-size: 0.85rem;
+    }
+  }
+}
