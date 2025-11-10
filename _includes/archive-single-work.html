@@ -78,7 +78,7 @@
                 {% assign years_display = total_months | divided_by: 12 %}
                 {% assign months_display = total_months | modulo: 12 %}
                 {% if years_display > 0 %}{{ years_display }} yr{% if years_display > 1 %}s{% endif %}{% endif %}
-                {% if months_display > 0 %} {{ months_display }} mo{% endif %}
+                {% if months_display > 0 %} {{ months_display }} mos{% endif %}
               </span>
             {% endif %}
           {% endif %}
