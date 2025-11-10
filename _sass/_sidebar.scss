@@ -99,8 +99,11 @@
   }
 
   img {
-    max-width: 175px;
+    max-width: 110px;
     border-radius: 50%;
+    width: 110px !important;      // Force square
+    height: 110px !important;     // Force square
+    object-fit: cover;            // Crop to fit without distortion
 
     @include breakpoint($large) {
       padding: 5px;
