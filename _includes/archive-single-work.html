@@ -55,8 +55,9 @@
           {% endif %}
           - 
           {% if post.date_to %}
-            {% assign current_date = "now" | date: "%Y-%m-%d" %}
-            {% if post.date_to >= current_date %}
+            {% assign today = site.time | date: "%Y%m%d" | plus: 0 %}
+            {% assign end_date = post.date_to | date: "%Y%m%d" | plus: 0 %}
+            {% if end_date >= today %}
               Present
             {% else %}
               {{ post.date_to | date: "%b %Y" }}
