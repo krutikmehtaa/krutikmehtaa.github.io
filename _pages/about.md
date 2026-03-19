@@ -22,7 +22,7 @@ I am a graduate student at the [University of Texas at Austin](https://www.utexa
 
 ---
 
-### Tech Stack
+### Technical Skills
 
 <div class="tech-stack-grid">
 
