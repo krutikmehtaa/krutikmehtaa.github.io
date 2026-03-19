@@ -27,10 +27,6 @@ I'm actively looking for **Summer 2026 internship opportunities** in Data Scienc
           <a href="tel:+17373426718">+1 (737) 342-6718</a>
         </span>
       </li>
-      <li class="contact-list__item">
-        <span class="contact-list__icon"><i class="fas fa-map-marker-alt"></i></span>
-        <span>Austin, TX &mdash; Open to relocation</span>
-      </li>
     </ul>
   </div>
 
