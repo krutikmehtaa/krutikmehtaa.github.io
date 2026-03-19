@@ -16,7 +16,7 @@ I am a graduate student at the [University of Texas at Austin](https://www.utexa
 
 ### What I'm up to
 
-**Research** — Working as a Graduate Research Assistant with [Professor Hüseyin Tanriverdi](https://www.mccombs.utexas.edu/faculty-and-research/faculty-directory/profile/?username=ht6973){:target="_blank" rel="noopener"} on a first-of-its-kind longitudinal study of the US healthcare industry — analyzing competitive landscapes, tacit collusions, service similarities and IT-intensity variables (including the Saidin Index) across comprehensive healthcare data.
+**Research** — Working as a Graduate Research Assistant with [Dr. Hüseyin Tanriverdi](https://www.mccombs.utexas.edu/faculty-and-research/faculty-directory/profile/?username=ht6973){:target="_blank" rel="noopener"} on a first-of-its-kind longitudinal study of the US healthcare industry — analyzing competitive landscapes, tacit collusions, service similarities and IT-intensity variables (including the Saidin Index) across comprehensive healthcare data.
 
 **Previously** — Senior Analyst at [Ernst & Young](https://www.ey.com/){:target="_blank" rel="noopener"} (Technology Consulting), Business Analyst at [Integr8 Fuels Inc.](https://integr8fuels.com/){:target="_blank" rel="noopener"} (Research & Development).
 

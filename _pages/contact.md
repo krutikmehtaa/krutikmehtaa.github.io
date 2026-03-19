@@ -5,7 +5,7 @@ excerpt: "Contact"
 author_profile: true
 ---
 
-I'm actively looking for **Summer 2026 internship opportunities** in Data Science and Engineering. Whether you have a role in mind, want to collaborate, or just want to say hi — my inbox is open.
+I'm actively looking for **Summer 2026 Internship opportunities** in Data Science & Engineering. Whether you have a role in mind, want to collaborate, or just want to say hi — my inbox is open.
 
 <div class="contact-layout">
 
