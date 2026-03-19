@@ -1,0 +1,457 @@
+---
+---
+
+/*
+ *    Minimal Mistakes Jekyll Theme
+ *
+ *  - Michael Rose
+ *  - mademistakes.com
+ *  - https://twitter.com/mmistakes
+ *
+*/
+
+@import "vendor/breakpoint/breakpoint"; // media query mixins
+@import "variables";
+@import "mixins";
+@import "vendor/susy/susy";
+
+@import "reset";
+@import "base";
+
+@import "utilities";
+@import "animations";
+@import "tables";
+@import "buttons";
+@import "notices";
+@import "masthead";
+@import "navigation";
+@import "footer";
+@import "syntax";
+
+@import "forms";
+
+@import "page";
+@import "archive";
+@import "sidebar";
+
+@import "vendor/font-awesome/fontawesome";
+@import "vendor/font-awesome/solid";
+@import "vendor/font-awesome/brands";
+@import "vendor/magnific-popup/magnific-popup";
+@import "print";
+
+/* ===================================
+   CUSTOM STYLES - Krutik Mehta
+   =================================== */
+
+/* Larger circular profile photo with zoom */
+.author__avatar img {
+  width: 180px !important;
+  height: 180px !important;
+  max-width: 180px !important;
+  max-height: 180px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+}
+
+/* Lighter map marker icon */
+.author__urls .fa-map-marker {
+  font-weight: 300 !important;
+  opacity: 0.8;
+}
+
+/* ===================================
+   LinkedIn-Style Experience Section
+   =================================== */
+
+.experience-item {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.experience-container {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.experience-logo {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background: white;
+    padding: 4px;
+  }
+  
+  a:hover img {
+    border-color: #0073b1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+  }
+}
+
+.experience-details {
+  flex: 1;
+  
+  .archive__item-title {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #000;
+  }
+  
+  .experience-company {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    
+    strong {
+      color: #000;
+    }
+    
+    a {
+      color: #000;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+        color: #0073b1;
+      }
+    }
+    
+    .employment-type {
+      color: #666;
+      font-weight: normal;
+    }
+  }
+  
+  .experience-dates {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+    
+    i {
+      margin-right: 0.25rem;
+    }
+    
+    .duration {
+      color: #666;
+    }
+  }
+  
+  .experience-location {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+    
+    i {
+      margin-right: 0.25rem;
+    }
+  }
+  
+  .experience-description {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #333;
+    
+    ul {
+      margin: 0.5rem 0 0 0;
+      padding-left: 0;
+      list-style-type: none;
+      
+      li {
+        margin-bottom: 0.5rem;
+        padding-left: 1.2rem;
+        position: relative;
+        
+        &::before {
+          content: "–";
+          position: absolute;
+          left: 0;
+          color: #2a6db5;
+          font-weight: 500;
+        }
+      }
+    }
+    
+    p {
+      margin: 0.5rem 0;
+      
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .experience-container {
+    gap: 0.75rem;
+  }
+  
+  .experience-logo {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .experience-details {
+    .archive__item-title {
+      font-size: 0.95rem;
+    }
+    
+    .experience-company {
+      font-size: 0.85rem;
+    }
+  }
+}
+/* ============================================
+   Blue Section & Sub-headers
+   ============================================ */
+.page__content h2 {
+  color: #2a6db5;
+}
+
+.page__content h3 {
+  color: #2a6db5;
+}
+
+/* ============================================
+   Whitespace fixes — Experience & Publications
+   ============================================ */
+
+/* Remove large top margin from the page title h1 on archive pages */
+.archive .page__title {
+  margin-top: 0;
+  margin-bottom: 0.6em;
+}
+
+/* Remove default 2em top margin from h2/h3 inside archive content */
+.archive h2,
+.archive h3 {
+  margin-top: 0.4em;
+}
+
+/* Remove the border-bottom + padding that page__content adds to h2
+   (archive doesn't use .page__content but guard anyway) */
+.archive .page__content h2 {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* Tighten paragraph bottom margin inside archive */
+.archive p {
+  margin-bottom: 0.6em;
+}
+
+/* Remove the gap Jekyll injects between archive list wrapper and first item */
+.archive .list__item:first-child,
+.archive .experience-item:first-child {
+  margin-top: 0;
+}
+
+/* ============================================
+   Tech Stack — Category Cards Grid
+   ============================================ */
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 0.6em 0 1.8em;
+}
+
+.tech-category-card {
+  background: #f8f9fb;
+  border: 1px solid #e4eaf4;
+  border-radius: 10px;
+  padding: 16px 18px;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.tech-category-card:hover {
+  border-color: #2a6db5;
+  box-shadow: 0 2px 10px rgba(42, 109, 181, 0.08);
+}
+
+.tech-category-title {
+  font-size: 0.7em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #2a6db5;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #dce8f5;
+}
+
+.tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech-chip {
+  background: #ffffff;
+  border: 1px solid #d0dff0;
+  border-radius: 20px;
+  padding: 3px 11px;
+  font-size: 0.78em;
+  font-weight: 500;
+  color: #2a4a7f;
+  transition: all 0.15s ease;
+  cursor: default;
+  line-height: 1.7;
+}
+
+.tech-chip:hover {
+  background: #2a6db5;
+  border-color: #2a6db5;
+  color: white;
+}
+
+/* ============================================
+   Contact — Two-column Layout
+   ============================================ */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 32px;
+  margin-top: 1.6em;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contact details (left column) */
+.contact-details {
+  padding-top: 2px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list__item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 10px 13px;
+  margin-bottom: 8px;
+  background: #f8f9fb;
+  border: 1px solid #e4eaf4;
+  border-radius: 7px;
+  font-size: 0.84em;
+  color: #333;
+  transition: border-color 0.18s ease;
+}
+
+.contact-list__item:hover {
+  border-color: #2a6db5;
+}
+
+.contact-list__icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8f0fb;
+  border-radius: 5px;
+  flex-shrink: 0;
+  color: #2a6db5;
+  font-size: 0.88em;
+}
+
+.contact-list__item a {
+  color: #333;
+  text-decoration: none;
+}
+
+.contact-list__item a:hover {
+  color: #2a6db5;
+}
+
+/* Contact form (right column) */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contact-form__label {
+  font-size: 0.68em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #555;
+  text-transform: uppercase;
+}
+
+.contact-form__input {
+  width: 100%;
+  padding: 10px 13px;
+  font-size: 0.88em;
+  color: #333;
+  background: #f8f9fb;
+  border: 1px solid #e4eaf4;
+  border-radius: 7px;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.contact-form__input:focus {
+  border-color: #2a6db5;
+  box-shadow: 0 0 0 3px rgba(42, 109, 181, 0.08);
+  background: #fff;
+}
+
+.contact-form__textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form__btn {
+  width: 100%;
+  padding: 12px;
+  background: #2a6db5;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background 0.18s ease;
+  font-family: inherit;
+  margin-top: 2px;
+}
+
+.contact-form__btn:hover {
+  background: #1f5496;
+}

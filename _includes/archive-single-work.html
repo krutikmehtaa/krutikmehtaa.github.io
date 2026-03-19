@@ -1,0 +1,103 @@
+{% include base_path %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item experience-item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <div class="experience-container">
+      
+      <!-- Company Logo -->
+      {% if post.company_logo %}
+      <div class="experience-logo">
+        {% if post.company_url %}
+          <a href="{{ post.company_url }}" target="_blank" rel="noopener">
+            <img src="{{ post.company_logo | prepend: base_path }}" alt="{{ post.title }} logo">
+          </a>
+        {% else %}
+          <img src="{{ post.company_logo | prepend: base_path }}" alt="{{ post.title }} logo">
+        {% endif %}
+      </div>
+      {% endif %}
+      
+      <!-- Experience Details -->
+      <div class="experience-details">
+        
+        <!-- Position Title -->
+        <h2 class="archive__item-title" itemprop="headline">
+          {{ post.type }}
+        </h2>
+        
+        <!-- Company Name -->
+        <div class="experience-company">
+          {% if post.company_url %}
+            <a href="{{ post.company_url }}" target="_blank" rel="noopener">
+              <strong>{{ title }}</strong>
+            </a>
+          {% else %}
+            <strong>{{ title }}</strong>
+          {% endif %}
+          
+          {% if post.employment_type %}
+            <span class="employment-type"> · {{ post.employment_type }}</span>
+          {% endif %}
+        </div>
+        
+        <!-- Date Range -->
+        <div class="experience-dates">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          {% if post.date_from %}
+            {{ post.date_from | date: "%b %Y" }}
+          {% endif %}
+          - 
+          {% if post.date_to %}
+            {% assign today = site.time | date: "%Y%m%d" | plus: 0 %}
+            {% assign end_date = post.date_to | date: "%Y%m%d" | plus: 0 %}
+            {% if end_date >= today %}
+              Present
+            {% else %}
+              {{ post.date_to | date: "%b %Y" }}
+            {% endif %}
+          {% else %}
+            Present
+          {% endif %}
+          
+          <!-- Calculate duration -->
+          {% if post.date_from and post.date_to %}
+            {% assign from_date = post.date_from | date: "%s" | divided_by: 86400 %}
+            {% assign to_date = post.date_to | date: "%s" | divided_by: 86400 %}
+            {% assign diff_days = to_date | minus: from_date %}
+            {% assign total_months = diff_days | divided_by: 30 %}
+            
+            {% if total_months > 0 %}
+              <span class="duration"> · 
+                {% assign years_display = total_months | divided_by: 12 %}
+                {% assign months_display = total_months | modulo: 12 %}
+                {% if years_display > 0 %}{{ years_display }} yr{% if years_display > 1 %}s{% endif %}{% endif %}
+                {% if months_display > 0 %} {{ months_display }} mos{% endif %}
+              </span>
+            {% endif %}
+          {% endif %}
+        </div>
+        
+        <!-- Location -->
+        {% if post.location %}
+        <div class="experience-location">
+          <i class="fa fa-map-marker-alt" style="font-weight: 300;" aria-hidden="true"></i> {{ post.location }}
+        </div>
+        {% endif %}
+        
+        <!-- Description/Responsibilities -->
+        <div class="experience-description">
+          {{ post.content }}
+        </div>
+        
+      </div>
+    </div>
+    
+  </article>
+</div>
