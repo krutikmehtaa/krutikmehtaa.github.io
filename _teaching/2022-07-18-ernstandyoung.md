@@ -14,5 +14,5 @@ employment_type: "Full-Time"
 - first real job was in the service industry at a Big 4
 - high pressure, lots of meetings, long hours
 - failed consistently and learned a lot
-- handled work for a lot of clients from different sectors (insurance, manufacturing, pharmaceutical) early on
+- handled work for clients from different sectors (insurance, manufacturing, pharmaceutical)
 - built amazing connections, got great feedback
