@@ -31,12 +31,9 @@ I am a graduate student at the [University of Texas at Austin](https://www.utexa
     <div class="tech-chips">
       <span class="tech-chip">Python</span>
       <span class="tech-chip">SQL</span>
-      <span class="tech-chip">Scala</span>
       <span class="tech-chip">R</span>
-      <span class="tech-chip">JavaScript</span>
-      <span class="tech-chip">C</span>
-      <span class="tech-chip">C#</span>
-      <span class="tech-chip">HTML</span>
+      <span class="tech-chip">Scala</span>
+      <span class="tech-chip">Java</span>
     </div>
   </div>
 
@@ -45,15 +42,12 @@ I am a graduate student at the [University of Texas at Austin](https://www.utexa
     <div class="tech-chips">
       <span class="tech-chip">Pandas</span>
       <span class="tech-chip">NumPy</span>
-      <span class="tech-chip">Matplotlib</span>
-      <span class="tech-chip">Seaborn</span>
       <span class="tech-chip">scikit-learn</span>
-      <span class="tech-chip">TensorFlow</span>
       <span class="tech-chip">PyTorch</span>
-      <span class="tech-chip">Huggingface</span>
+      <span class="tech-chip">TensorFlow</span>
       <span class="tech-chip">Spark</span>
-      <span class="tech-chip">React</span>
-      <span class="tech-chip">Node.js</span>
+      <span class="tech-chip">Huggingface</span>
+      <span class="tech-chip">Matplotlib</span>      
     </div>
   </div>
 
@@ -66,7 +60,6 @@ I am a graduate student at the [University of Texas at Austin](https://www.utexa
       <span class="tech-chip">MongoDB</span>
       <span class="tech-chip">Pinecone</span>
       <span class="tech-chip">Redis</span>
-      <span class="tech-chip">Neo4j</span>
     </div>
   </div>
 
@@ -83,6 +76,7 @@ I am a graduate student at the [University of Texas at Austin](https://www.utexa
     <div class="tech-category-title">Tools &amp; Platforms</div>
     <div class="tech-chips">
       <span class="tech-chip">Git</span>
+      <span class="tech-chip">MLflow</span>
       <span class="tech-chip">CI/CD</span>
       <span class="tech-chip">dbt</span>
       <span class="tech-chip">Airflow</span>
@@ -91,9 +85,8 @@ I am a graduate student at the [University of Texas at Austin](https://www.utexa
       <span class="tech-chip">Jupyter</span>
       <span class="tech-chip">Tableau</span>
       <span class="tech-chip">PowerBI</span>
-      <span class="tech-chip">Postman</span>
-      <span class="tech-chip">JIRA</span>
-      <span class="tech-chip">Confluence</span>
+      <span class="tech-chip">Alteryx</span>
+      <span class="tech-chip">Cursor</span>
     </div>
   </div>
 
