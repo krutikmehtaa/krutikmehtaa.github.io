@@ -10,15 +10,15 @@ redirect_from:
 
 Hey there!
 
-I am a graduate student at the [University of Texas at Austin](https://www.utexas.edu/){:target="_blank" rel="noopener"} pursuing my Master's in [Information Science (Data Science)](https://cns.utexas.edu/){:target="_blank" rel="noopener"}.
+I am a graduate student at the [University of Texas at Austin](https://www.utexas.edu/){:target="_blank" rel="noopener"} pursuing my Master's in [Information Science (specializing in Data Science)](https://computing.utexas.edu/){:target="_blank" rel="noopener"}.
 
 ---
 
 ### What I'm up to
 
-**Research** — Working as a Graduate Research Assistant with [Dr. Hüseyin Tanriverdi](https://www.mccombs.utexas.edu/faculty-and-research/faculty-directory/profile/?username=ht6973){:target="_blank" rel="noopener"} on a first-of-its-kind longitudinal study of the US healthcare industry — analyzing competitive landscapes, tacit collusions, service similarities and IT-intensity variables (including the Saidin Index) across comprehensive healthcare data.
+**Research** - Currently working as a Research Assistant with [Akinwande Nano Lab](https://sites.utexas.edu/nano/) to achieve a revolutionary benchmark in calculating and syncing RF and blood pressure profiles for wearable technologies. Previously worked with [Dr. Hüseyin Tanriverdi](https://www.mccombs.utexas.edu/faculty-and-research/faculty-directory/profile/?username=ht6973){:target="_blank" rel="noopener"} on a first-of-its-kind longitudinal study of the US healthcare industry analyzing competitive landscapes, tacit collusions, service similarities and IT-intensity variables across comprehensive 10-year data.
 
-**Previously** — Senior Analyst at [Ernst & Young](https://www.ey.com/){:target="_blank" rel="noopener"} (Technology Consulting), Business Analyst at [Integr8 Fuels Inc.](https://integr8fuels.com/){:target="_blank" rel="noopener"} (Research & Development).
+**Previously** - Worked as an AI Data Science Intern for [FIX-IT](https://www.fixitapp.us/) during Summer 2026. Previous roles include Business Analyst at [Integr8 Fuels Inc.](https://integr8fuels.com/){:target="_blank" rel="noopener"} (Research & Product Development) and Senior Analyst at [Ernst & Young](https://www.ey.com/){:target="_blank" rel="noopener"} (Technology Consulting).
 
 ---
 
@@ -96,7 +96,7 @@ I am a graduate student at the [University of Texas at Austin](https://www.utexa
 
 ### Beyond the Work
 
-When I'm not working, I enjoy traveling, watching Formula1. I occassionally watch and play Football and Cricket. I also do some photography as a hobby.
+When I'm not working, I enjoy traveling. I like to watch Football, Formula 1 and Cricket. I also do some photography as a hobby.
 
 ---
 

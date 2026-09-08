@@ -11,8 +11,8 @@ company_url: "http://www.ey.com/"
 employment_type: "Full-Time"
 ---
 <br>
-- first real job was in the service industry at a Big 4
-- high pressure, lots of meetings, long hours
-- failed consistently and learned a lot
+- service industry at a Big 4
+- high pressure, long hours
+- failed consistently but learned a lot
 - handled work for clients from different sectors (insurance, manufacturing, pharmaceutical)
-- built amazing connections, got great feedback
+- built amazing connections, got great feedback reviews
